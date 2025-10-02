@@ -1,75 +1,152 @@
-# Tiny File Manager
+# Tiny File Manager - P4X-ng Edition
 
-[![Live demo](https://img.shields.io/badge/Live-Demo-brightgreen.svg?style=flat-square)](https://tinyfilemanager.github.io/demo/)
-[![Live demo](https://img.shields.io/badge/Help-Docs-lightgrey.svg?style=flat-square)](https://github.com/prasathmani/tinyfilemanager/wiki)
-[![GitHub Release](https://img.shields.io/github/release/prasathmani/tinyfilemanager.svg?style=flat-square)](https://github.com/prasathmani/tinyfilemanager/releases)
-[![GitHub License](https://img.shields.io/github/license/prasathmani/tinyfilemanager.svg?style=flat-square)](https://github.com/prasathmani/tinyfilemanager/blob/master/LICENSE)
-[![Paypal](https://img.shields.io/badge/Donate-Paypal-lightgrey.svg?style=flat-square)](https://www.paypal.me/prasathmani)
-![GitHub Sponsors](https://img.shields.io/github/sponsors/prasathmani)
+[![GitHub License](https://img.shields.io/github/license/P4X-ng/tinyfilemanager.svg?style=flat-square)](https://github.com/P4X-ng/tinyfilemanager/blob/master/LICENSE)
+[![GitHub Release](https://img.shields.io/github/release/P4X-ng/tinyfilemanager.svg?style=flat-square)](https://github.com/P4X-ng/tinyfilemanager/releases)
 
-> TinyFileManager is a versatile web-based PHP file manager designed for simplicity and efficiency. This lightweight single-file PHP application can be effortlessly integrated into any server directory, allowing users to store, upload, edit, and manage files and folders directly through their web browser.
-With multi-language support and compatibility with PHP 5.5+, TinyFileManager enables the creation of individual user accounts, each with its dedicated directory. The platform also includes built-in functionality for handling text files using the Cloud9 IDE.
-Featuring syntax highlighting for over 150 languages and more than 35 themes, TinyFileManager offers a comprehensive solution for file management in an online environment.
+> **P4X-ng Tiny File Manager** is an enhanced fork that includes both the original PHP version and a brand-new **JavaScript/Node.js** implementation. This dual-language approach gives you flexibility to choose the right tool for your environment - whether you need the full-featured PHP version or the lightweight, dependency-free Node.js version.
 
-<sub>**Caution!** _Avoid utilizing this script as a standard file manager in public spaces. It is imperative to remove this script from the server after completing any tasks._</sub>
+## 🚀 What's New in P4X-ng Edition
 
-## Demo
+This fork introduces a **JavaScript/Node.js translation** of Tiny File Manager, making it accessible to Node.js environments without requiring PHP. The JavaScript version is perfect for:
 
-[Demo](https://tinyfilemanager.github.io/demo/)
+- **Quick local file browsing** on any machine with Node.js
+- **Lightweight file management** without PHP dependencies
+- **Simple deployment** with just a single file
+- **Development environments** where Node.js is already installed
 
+## 📸 Screenshots
 
-## Documentation
+### Login Interface
+[![Login Page](screenshot-login.png)](screenshot-login.png)
 
-Tinyfilemanager is highly documented on the [wiki pages](https://github.com/prasathmani/tinyfilemanager/wiki).
+### File Browser
+[![File Browser](screenshot-browse.png)](screenshot-browse.png)
 
-[![Tiny File Manager](screenshot.gif)](screenshot.gif)
+### File Viewer
+[![File Viewer](screenshot-view.png)](screenshot-view.png)
 
-## Requirements
+## 🎯 Two Versions, One Repository
 
-- PHP 5.5.0 or higher.
-- Fileinfo, iconv, zip, tar and mbstring extensions are strongly recommended.
+### JavaScript/Node.js Version
+- **Single file**: `tinyfilemanager.js`
+- **Zero dependencies**: Uses only Node.js built-in modules
+- **Quick start**: `node tinyfilemanager.js`
+- **Perfect for**: Development, local file browsing, lightweight deployments
+- **See**: [README-JS.md](README-JS.md) for full JavaScript documentation
 
-## How to use
+### PHP Version  
+- **Single file**: `tinyfilemanager.php`
+- **Full featured**: Complete file management with upload, edit, delete, zip
+- **Multi-language**: 35+ language translations
+- **Perfect for**: Web hosting, production environments, advanced features
+- **Original docs**: [prasathmani/tinyfilemanager wiki](https://github.com/prasathmani/tinyfilemanager/wiki)
 
-Download ZIP with latest version from master branch.
+## 📋 Quick Start
 
-Just copy the tinyfilemanager.php to your webspace - thats all :)
-You can also change the file name from "tinyfilemanager.php" to something else, you know what i meant for.
+### JavaScript/Node.js Version
 
-Default username/password: **admin/admin@123** and **user/12345**.
+**Requirements:** Node.js 12.0 or higher (no additional packages needed)
 
-:warning: Warning: Please set your own username and password in `$auth_users` before use. password is encrypted with <code>password_hash()</code>. to generate new password hash [here](https://tinyfilemanager.github.io/docs/pwd.html)
+```bash
+# Download and run
+curl -O https://raw.githubusercontent.com/P4X-ng/tinyfilemanager/master/tinyfilemanager.js
+node tinyfilemanager.js
 
-To enable/disable authentication set `$use_auth` to true or false.
+# Access at http://localhost:8080
+# Default login: admin / admin@123
+```
 
-:information_source: Add your own configuration file [config.php](https://tinyfilemanager.github.io/config-sample.txt) in the same folder to use as additional configuration file.
+See [README-JS.md](README-JS.md) for more options.
 
-:information_source: To work offline without CDN resources, use [offline](https://github.com/prasathmani/tinyfilemanager/tree/offline) branch
+### PHP Version
 
-### :loudspeaker: Features
+**Requirements:** PHP 5.5.0 or higher (Fileinfo, iconv, zip, tar and mbstring extensions recommended)
 
-- :cd: **Open Source:** Lightweight, minimalist, and extremely simple to set up.
-- :iphone: **Mobile Friendly:** Optimized for touch devices and mobile viewing.
-- :information_source: **Core Features:** Easily create, delete, modify, view, download, copy, and move files.
-- :arrow_double_up: **Advanced Upload Options:** Ajax-powered uploads with drag-and-drop support, URL imports, and multi-file uploads with extension filtering.
-- :file_folder: **Folder & File Management:** Create and organize folders and files effortlessly.
-- :gift: **Compression Tools:** Compress and extract files in `zip` and `tar` formats.
-- :sunglasses: **User Permissions:** User-specific root folder mapping and session-based access control.
-- :floppy_disk: **Direct URLs:** Easily copy direct URLs for files.
-- :pencil2: **Code Editor:** Includes Cloud9 IDE with syntax highlighting for 150+ languages and 35+ themes.
-- :page_facing_up: **Document Preview:** Google/Microsoft document viewer for PDF/DOC/XLS/PPT, supporting previews up to 25 MB.
-- :zap: **Security Features:** Backup capabilities, IP blacklisting, and whitelisting.
-- :mag_right: **Search Functionality:** Use `datatable.js` for fast file search and filtering.
-- :file_folder: **Customizable Listings:** Exclude specific folders and files from directory views.
-- :globe_with_meridians: **Multi-language Support:** Translations available in 35+ languages with `translation.json`.
-- :bangbang: **And Much More!**
+```bash
+# Download and deploy
+curl -O https://raw.githubusercontent.com/P4X-ng/tinyfilemanager/master/tinyfilemanager.php
+# Upload to your web server
+```
 
-### [Deploy by Docker](https://github.com/prasathmani/tinyfilemanager/wiki/Deploy-by-Docker)
+**Setup:**
 
-### <a name=license></a>License, Credit
+1. Copy `tinyfilemanager.php` to your webspace
+2. Default credentials: **admin/admin@123** and **user/12345**
+3. ⚠️ **Important**: Set your own username and password in `$auth_users` before use
 
-- Available under the [GNU license](https://github.com/prasathmani/tinyfilemanager/blob/master/LICENSE)
-- Original concept and development by github.com/alexantr/filemanager
-- CDN Used - _jQuery, Bootstrap, Font Awesome, Highlight js, ace js, DropZone js, and DataTable js_
-- To report a bug or request a feature, please file an [issue](https://github.com/prasathmani/tinyfilemanager/issues)
-- [Contributors](https://github.com/prasathmani/tinyfilemanager/wiki/Authors-and-Contributors)
+Password is encrypted with `password_hash()`. Generate new hash [here](https://tinyfilemanager.github.io/docs/pwd.html).
+
+**Configuration:**
+- Enable/disable authentication: Set `$use_auth` to true or false
+- Custom config: Add [config.php](https://tinyfilemanager.github.io/config-sample.txt) in the same folder
+- Offline mode: Use [offline branch](https://github.com/prasathmani/tinyfilemanager/tree/offline) to work without CDN
+
+## ✨ Features Comparison
+
+### JavaScript Version Features
+- ✅ **File Browsing**: Navigate directories with breadcrumb navigation
+- ✅ **File Download**: Download files directly
+- ✅ **File Viewing**: Preview text files, images, and more
+- ✅ **Authentication**: Simple login system
+- ✅ **Responsive UI**: Bootstrap 5 interface
+- ✅ **Zero Config**: Works out of the box
+
+### PHP Version Features (Full Feature Set)
+
+- 📁 **Complete File Management**: Create, delete, modify, view, download, copy, and move files
+- ⬆️ **Advanced Upload**: Ajax uploads with drag-and-drop, URL imports, multi-file with filtering
+- 📂 **Folder Operations**: Create and organize folders effortlessly  
+- 🗜️ **Compression Tools**: Compress and extract `zip` and `tar` archives
+- 👥 **User Permissions**: User-specific root folders and session-based access control
+- 📋 **Code Editor**: Cloud9 IDE with 150+ languages and 35+ themes syntax highlighting
+- 📄 **Document Preview**: Google/Microsoft viewer for PDF/DOC/XLS/PPT (up to 25 MB)
+- 🔒 **Security**: Backup capabilities, IP blacklisting, and whitelisting
+- 🔍 **Search**: Fast file search and filtering with DataTables.js
+- 🌐 **Multi-language**: Translations in 35+ languages
+- 🎨 **Customizable**: Exclude folders/files, customize listings
+- 📱 **Mobile Friendly**: Optimized for touch devices
+- 🔗 **Direct URLs**: Easy file URL copying
+
+## 🐳 Docker Deployment
+
+For PHP version: [Deploy by Docker](https://github.com/prasathmani/tinyfilemanager/wiki/Deploy-by-Docker)
+
+## 📚 Documentation
+
+- **JavaScript Version**: See [README-JS.md](README-JS.md)
+- **PHP Version**: [Wiki pages](https://github.com/prasathmani/tinyfilemanager/wiki)
+
+## ⚠️ Security Notice
+
+**Important**: This tool is designed for development and personal use. If deploying in production:
+
+- Change default passwords immediately
+- Use HTTPS (for PHP: configure your web server; for JS: use a reverse proxy)
+- Implement proper firewall rules
+- Don't expose directly to the internet without protection
+- Remove from server when not actively needed
+
+## 📜 License & Credits
+
+- **License**: Available under the [GNU General Public License](https://github.com/P4X-ng/tinyfilemanager/blob/master/LICENSE)
+- **Original PHP Version**: [prasathmani/tinyfilemanager](https://github.com/prasathmani/tinyfilemanager) by [CCP Programmers](https://tinyfilemanager.github.io/)
+- **Original Concept**: [github.com/alexantr/filemanager](https://github.com/alexantr/filemanager)
+- **JavaScript Translation**: P4X-ng fork maintainers
+- **CDN Libraries**: jQuery, Bootstrap 5, Font Awesome, Highlight.js, Ace Editor, DropZone.js, DataTables.js
+
+## 🤝 Contributing
+
+Issues and pull requests are welcome! 
+
+- For JavaScript version issues: File here in this repository
+- For PHP version issues: Consider contributing to [upstream repository](https://github.com/prasathmani/tinyfilemanager)
+
+## 🔗 Links
+
+- [Original Tiny File Manager](https://github.com/prasathmani/tinyfilemanager)
+- [PHP Version Wiki](https://github.com/prasathmani/tinyfilemanager/wiki)
+- [Live Demo (PHP)](https://tinyfilemanager.github.io/demo/)
+
+---
+
+<sub>**Note**: The JavaScript version is a simplified implementation focused on core file browsing and viewing features. For full file management capabilities (upload, edit, delete, zip), use the PHP version.</sub>
